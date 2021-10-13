@@ -12,7 +12,7 @@ fn main() {
 }
 
 pub fn simple_recursive_function() -> Result<()> {
-    if rand::random::<f32>() < 0.9 {
+    if rand::random::<f32>() < 0.8 {
         simple_recursive_function()?;
         simple_recursive_function()?;
         Ok(())
