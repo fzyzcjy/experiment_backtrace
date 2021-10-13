@@ -1,9 +1,13 @@
+use std::env;
+
 use anyhow::{anyhow, Result};
 
 fn main() {
     println!("main start");
+    env::set_var("RUST_BACKTRACE", "1");
     let err = simple_recursive_function().err().unwrap();
     println!("The error object I see: {:?}", err);
+    println!("err.backtrace={:?}", err.backtrace());
     println!("main end");
 }
 
